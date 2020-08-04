@@ -11,6 +11,9 @@ class MainController
         $this->model = $model;
     }
 
+    /**
+     * Method used to load views with parameters
+     */
     protected function loadView($viewName, $params)
     {
         $view_path = $_SERVER['DOCUMENT_ROOT'] . '/Views/' . $viewName . '.php';
