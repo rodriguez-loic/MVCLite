@@ -1,0 +1,77 @@
+/**
+ * LittleRed CSS
+ *
+ * @version 1.0
+ * @author Loïc Rodriguez <contact@rodriguez-loic.me>
+ * @contributors
+ */
+
+html, body { margin: 0; padding: 0; }
+body { font-family: 'Source Sans Pro', sans-serif; }
+h1 {
+    font-size: 2rem;
+    color: #D50000;
+    padding: 0.1em 0 0.1em 0.25em;
+    font-family: 'Lato';
+    text-align: center;
+}
+h2 { font-size: 1.7rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
+p {
+    margin: 0; padding: 1em 0.5em;
+    text-align: justify;
+    overflow: hidden;
+    font-size: 1rem;
+}
+a, a:visited, a:active { color: #d50000; }
+a:hover, a:focus { color: #ffab00; text-decoration: underline; }
+a:active,
+a:hover {
+    outline: 0;
+}
+
+#footer {
+    font-size: 0.3em;
+}
+
+#footer p {
+    text-align: center;
+}
+
+
+.lr-left { float:left; }
+.lr-right { float: right; }
+.lr-clear { clear: both; }
+.lr-hf-large-only { display: hide; }
+.lr-hf-medium-large { display: hide; }
+.lr-hf-medium-only { display: show; }
+.lr-hf-small-medium { display: show; }
+.lr-hf-small-only { display: show; }
+
+/**
+ * Large
+ */
+@media only screen and (min-width: 64.063em) {}
+
+/**
+ * Medium
+ */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .lr-hf-large-only { display: show; }
+    .lr-hf-medium-large { display: hide; }
+    .lr-hf-medium-only { display: hide; }
+    .lr-hf-small-medium { display: hide; }
+    .lr-hf-small-only { display: show; }
+}
+
+/**
+ * Small
+ */
+@media only screen and (max-width: 40em) {
+    .lr-hf-large-only { display: show; }
+    .lr-hf-medium-large { display: show; }
+    .lr-hf-medium-only { display: show; }
+    .lr-hf-small-medium { display: hide; }
+    .lr-hf-small-only { display: hide; }
+}

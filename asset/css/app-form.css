@@ -1,0 +1,142 @@
+.lr-field {
+  margin-top: 1rem;
+  position: relative;
+}
+.lr-form form { line-height: 3rem; }
+.lr-form input {
+    margin: 0;
+}
+.lr-form .input:focus:not([readonly]) + label { color:  #ffab00; }
+
+/* Placeholders */
+/* WebKit, Blink, Edge */
+.lr-form input::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; }
+/* Mozilla Firefox 4 to 18 */
+.lr-form input:-moz-placeholder { color: currentcolor; opacity: 0.5; }
+/* Mozilla Firefox 19+ */
+.lr-form input::-moz-placeholder { color: currentcolor; opacity: 0.5; }
+/* Internet Explorer 10-11 */
+.lr-form input:-ms-input-placeholder {
+    color: currentcolor;
+    filter: alpha(opacity=50);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+/* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+.lr-form input:placeholder-shown { color: currentcolor; opacity: 0.5; -moz-opacity:0.5; }
+
+.lr-form input[type="text"],
+.lr-form input[type="password"],
+.lr-form input[type="email"],
+.lr-form input[type="url"],
+.lr-form input[type="time"],
+.lr-form input[type="date"],
+.lr-form input[type="datetime-local"], 
+.lr-form input[type="tel"],
+.lr-form input[type="number"],
+.lr-form input[type="search"],
+.lr-form textarea.lr-textarea {
+    background-color: transparent;
+    border-color: currentcolor;
+     -moz-border-colors: none;
+      -webkit-border-colors: none;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    box-shadow: none;
+    box-sizing: content-box;
+    font-size: 1rem;
+    height: 3rem;
+    margin: 0 0 15px;
+    outline: medium none;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+    opacity: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -filter: alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity:1;
+}
+.lr-form input[type="text"]:focus:not([readonly]),
+.lr-form input[type="password"]:focus:not([readonly]),
+.lr-form input[type="email"]:focus:not([readonly]),
+.lr-form input[type="url"]:focus:not([readonly]),
+.lr-form input[type="time"]:focus:not([readonly]),
+.lr-form input[type="date"]:focus:not([readonly]),
+.lr-form input[type="datetime-local"]:focus:not([readonly]),
+.lr-form input[type="tel"]:focus:not([readonly]),
+.lr-form input[type="number"]:focus:not([readonly]),
+.lr-form input[type="search"]:focus:not([readonly]),
+.lr-form textarea.lr-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ffab00;
+    box-shadow: 0 1px 0 0 #ffab00;
+    color: #ffab00;
+}
+.lr-form input[type="text"] + label::after,
+.lr-form input[type="password"] + label::after,
+.lr-form input[type="email"] + label::after,
+.lr-form input[type="url"] + label::after,
+.lr-form input[type="time"] + label::after,
+.lr-form input[type="date"] + label::after,
+.lr-form input[type="datetime-local"] + label::after,
+.lr-form input[type="tel"] + label::after,
+.lr-form input[type="number"] + label::after,
+.lr-form input[type="search"] + label::after,
+.lr-form textarea.lr-textarea + label::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 65px;
+    transition: opacity 0.2s ease-out 0s, color 0.2s ease-out 0s;
+}
+.lr-form input[type="text"]:focus:not([readonly]) + label,
+.lr-form input[type="password"]:focus:not([readonly]) + label,
+.lr-form input[type="email"]:focus:not([readonly]) + label,
+.lr-form input[type="url"]:focus:not([readonly]) + label,
+.lr-form input[type="time"]:focus:not([readonly]) + label,
+.lr-form input[type="date"]:focus:not([readonly]) + label,
+.lr-form input[type="datetime-local"]:focus:not([readonly]) + label,
+.lr-form input[type="tel"]:focus:not([readonly]) + label,
+.lr-form input[type="number"]:focus:not([readonly]) + label,
+.lr-form input[type="search"]:focus:not([readonly]) + label,
+.lr-form textarea.lr-textarea:focus:not([readonly]) + label {
+    color:  #ffab00;
+}
+.lr-field label.active {
+    font-size: 0.8rem;
+    transform: translateY(-75%);
+}
+.lr-field label {
+    color: currentColor;
+    cursor: text;
+    font-size: 1rem;
+    left: 0rem;
+    position: absolute;
+    top: 0;
+    transition: all 0.2s ease-out 0s;
+}
+.lr-btn {
+    background-color: #d50000;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.75px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-out 0s;
+    border: medium none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0 none;
+    padding: 0 2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.z-depth-1,
+.lr-btn {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}

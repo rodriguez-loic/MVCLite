@@ -1,6 +1,7 @@
 {
-    "name": "akronos/mvclite",
+    "name": "akronos/mvclite2",
     "description": "Very Light MVC",
+    "version": "2.0.0-beta",
     "type": "project",
     "authors": [
         {
@@ -8,10 +9,15 @@
             "email": "contact@rodriguez-loic.me"
         }
     ],
+    "license": [
+       "LGPL-2.1-only",
+       "GPL-3.0-or-later"
+    ],
     "minimum-stability": "alpha",
     "require": {},
     "autoload": {
       "psr-4": {
+        "": "src/",
         "Components\\": "Components/",
         "Controllers\\": "Controllers/",
         "Models\\": "Models/"

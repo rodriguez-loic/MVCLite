@@ -1,0 +1,23 @@
+.lr-container {
+    display: block;
+}
+@media only screen and (min-width: 1025px) {
+    .lr-container {
+        background: url('/img/resources/background-002.jpg') no-repeat center center fixed;
+        background-size: cover;
+         -webkit-background-size: cover;
+          -moz-background-size: cover;
+           -o-background-size: cover;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/resources/background-002.jpg', sizingMethod='scale');
+         -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/resources/background-002.jpg', sizingMethod='scale')";
+        width: 100%; min-height: 100vh;
+        position: absolute;
+    }
+    .lr-container .lr-row-full #lr-content,
+    .lr-container .lr-row-full #lr-menu-left {
+        background-color: #fff;
+    }
+    .lr-container .lr-row-full h1 {
+        margin: 0;
+    }
+}

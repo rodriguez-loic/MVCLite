@@ -9,4 +9,5 @@ return array(
     'Models\\' => array($baseDir . '/Models'),
     'Controllers\\' => array($baseDir . '/Controllers'),
     'Components\\' => array($baseDir . '/Components'),
+    '' => array($baseDir . '/src'),
 );

@@ -1,0 +1,138 @@
+#lr-menu {
+    background-color: #D50000;
+    color: #fff;
+    width: 100%; height: 60px;
+}
+#lr-menu .lr-logo h1,
+#lr-menu .lr-logo img {
+    /* font-family: 'Lato'; */
+    padding: 10px 5px;
+    margin: 0;
+    font-family: inherit;
+    color: #FFF;
+    height: 40px;
+    line-height: 40px;
+    font-size: 28px;
+    font-weight: 100;
+    float: left;
+    text-align: left;
+}
+#lr-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+#lr-menu ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+}
+#lr-menu ul > li {
+    float: left;
+    margin: 0;
+    text-align: center;
+    min-width: 150px; height: 60px;
+}
+#lr-menu ul > li a {
+    width: 100%; height: 100%;
+    line-height: 60px;
+    padding: 0 1.5em;
+}
+#lr-menu ul.lr-left {
+    float:left;
+}
+#lr-menu ul.lr-left > li:first-child {
+    margin-left: 0.5em;
+}
+#lr-menu ul.lr-center-rel,
+#lr-menu ul.lr-center-abs {
+    display: block;
+    float:left;
+}
+#lr-menu ul.lr-right {
+    float:right;
+}
+#lr-menu ul > li.lr-active,
+#lr-menu ul > li:hover,
+#lr-menu uk > li:focus {
+    background-color: #f44336;
+}
+#lr-menu ul > li.lr-register {
+    background-color: #ff7000;
+}
+#lr-menu ul > li.lr-register:hover,
+#lr-menu ul > li.lr-register:focus {
+    background-color: #ff4000;
+}
+
+@media only screen and (min-width: 1025px) {
+    #lr-menu #lr-menu-title {
+        display:none;
+    }        
+    #lr-menu .lr-logo {
+        display:block;
+    }    
+    #lr-menu > ul {
+        display: block;
+    }
+    #lr-menu .lr-menu-icon {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    #lr-menu #lr-menu-title {
+        displau: block;
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    #lr-menu .lr-menu-icon {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        height: 16px; width: 20px;
+        margin: 0 0.5rem 0 0.25rem;
+    }
+
+    #lr-menu .lr-menu-icon::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 2px;
+        background: #fff;
+        top: 0;
+        left: 0;
+        box-shadow: 0 7px 0 #fff, 0 14px 0 #fff;
+    }
+
+    #lr-menu .lr-logo {
+        display: none;
+    }
+    #lr-menu > ul {
+        display: none;
+        width: 100%;
+        clear: both;
+        margin: 0; padding: 0;
+        height: auto;
+    }
+    #lr-menu.lr-menu-open > ul {
+        display: block;
+    }
+    #lr-menu > ul > li {
+        clear: both;
+        width: 100%; height: 60px;
+        background-color: #f44336;
+        margin: 0; padding: 0;
+    }
+    #lr-menu ul.lr-left > li:first-child {
+        margin: 0;
+    }
+    #lr-menu ul > li:hover,
+    #lr-menu ul > li:focus {
+        background-color: #d50000;
+    }
+}
