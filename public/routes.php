@@ -2,7 +2,10 @@
 
 $routes = [
     '*' => [
-        '/' => 'IndexController',
+        '/' => [
+            'controller' => 'IndexController',
+            'template' => 'template-index'
+        ]
     ],
     'GET' => [
         'test' => 'Test\SubnamespaceController'

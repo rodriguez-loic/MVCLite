@@ -10,9 +10,13 @@ class Template
     private $mainTemplate = 'template.php';
     private $reservedVariables = ['application_name', 'body'];
  
-    public function __construct()
+    public function __construct($template = '')
     {
         $this->viewPath = sprintf($this->viewPath, APP_ROOT);
+
+        if ($template !== '') {
+            $this->mainTemplate = $template . '.php';
+        }
     }
  
     public function getView($path, array $variables = [])

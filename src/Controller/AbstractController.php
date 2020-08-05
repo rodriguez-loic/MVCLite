@@ -8,9 +8,9 @@ class AbstractController
 {
     protected $template;
 
-    public function __construct()
+    public function __construct($template = '')
     {
-        $this->template = new Template();
+        $this->template = new Template($template);
     }
 
     protected function request($key) {

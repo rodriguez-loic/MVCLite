@@ -7,9 +7,9 @@ use Core\Template;
 
 class IndexController extends AbstractController
 {
-    public function __construct()
+    public function __construct($template = '')
     {
-        parent::__construct();
+        parent::__construct($template);
     }
 
     public function indexAction()

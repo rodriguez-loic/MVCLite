@@ -1,6 +1,6 @@
 <?php
 
-    define('APP_NAME', 'MVCLite');
+    define('APP_NAME', 'L\'Imaginarium');
     define('APP_DOMAIN', 'localhost');
     define('APP_ROOT', dirname(__DIR__));
      
@@ -12,6 +12,6 @@
     define('APP_CONTROLLER_METHOD_SUFFIX', 'Action');
      
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'mvclite');
+    define('DB_NAME', 'imaginarium');
     define('DB_USER', 'root');
     define('DB_PASS', '');

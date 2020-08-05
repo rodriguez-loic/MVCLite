@@ -47,17 +47,17 @@ class Request
     {
 
         $urlParts = $this->getUrlParts();
- 
-        // If controller name is not set in URL return default one
-        /*if (!isset($urlParts[0])) {
-            return APP_CONTROLLER_NAMESPACE.APP_DEFAULT_CONTROLLER;
-        }*/
 
         $route = Router::getRoute($urlParts[0]);
+
+        $ctrlrRoute = $route['controller'];
  
         // If controller exists in system then return it
-        if (class_exists(APP_CONTROLLER_NAMESPACE.$route)) {
-            return APP_CONTROLLER_NAMESPACE.$route;
+        if (class_exists(APP_CONTROLLER_NAMESPACE.$ctrlrRoute)) {
+            return [
+                'controller' => APP_CONTROLLER_NAMESPACE.$ctrlrRoute,
+                'template' => $route['template']
+            ];
         }
  
         // Otherwise
@@ -139,10 +139,6 @@ class Request
         //$url = str_replace(APP_INNER_DIRECTORY, null, $this->getServer('REQUEST_URI'));
 
         $urlParts = $this->getServer('PATH_INFO') ? explode('/', ltrim($this->getServer('PATH_INFO'),'/')) : '/';
-
-        /*$urlParts = explode('/', ltrim($this->getServer('PATH_INFO')));
-        $urlParts = array_filter($urlParts);
-        $urlParts = array_values($urlParts);*/
  
         return $urlParts;
     }

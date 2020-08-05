@@ -9,11 +9,12 @@ use Core\Template;
 $request = new Request($_SERVER, $_POST, $_GET, $_FILES);
  
 try {
-    $controller = $request->getController();
+    $controllerData = $request->getController();
+    $controller = $controllerData['controller'];
     $method = $request->getMethod($controller);
     $params = $request->getParams($controller, $method);
 
-    $controller = new $controller();
+    $controller = new $controller($controllerData['template']);
     if (!empty($params)) {
         echo call_user_func_array(array($controller, $method), $params);
     } else {
@@ -23,7 +24,7 @@ try {
     $template = new Template();
     echo $template->getView('error', [
         'title' => APP_NAME.' - Home',
-        'header' => 'Welcome to '. APP_NAME,
+        'header' => APP_NAME,
         'errorCode' => $e->getCode(),
         'errorMessage' => $e->getMessage(),
         'errorFile' => $e->getFile(),
