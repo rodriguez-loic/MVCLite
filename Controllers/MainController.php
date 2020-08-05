@@ -1,6 +1,6 @@
 <?php
 
-namespace Imaginarium;
+namespace Controllers;
 
 class MainController
 {
@@ -16,7 +16,9 @@ class MainController
      */
     protected function loadView($viewName, $params)
     {
-        $view_path = $_SERVER['DOCUMENT_ROOT'] . '/Views/' . $viewName . '.php';
+        extract($params);
+
+        $view_path = DIR_ROOT . 'Views/' . $viewName . '.php';
 
         if (!file_exists($view_path)) {
             header('HTTP/1.1 404 Not Found');

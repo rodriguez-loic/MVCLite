@@ -1,6 +1,6 @@
 <?php
 
-namespace Imaginarium;
+namespace Models;
 
 class IndexModel extends MainModel
 {
@@ -11,10 +11,16 @@ class IndexModel extends MainModel
 
     public function getUsernameDetails()
     {
-        // This should be communication with DB to get username details
-        return [
-            'id' => 1,
-            'username' => 'Human'
-        ];
+        $sql = '
+            SELECT *
+            FROM users
+            WHERE id = 1
+        ';
+
+        $userDetails = $this->runQuery($sql);
+        if ($userDetails->rowCount() == 1)
+          return $userDetails->fetch();
+        else
+          throw new Exception("No user found for ID '$idBillet'");
     }
 }

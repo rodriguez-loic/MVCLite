@@ -1,6 +1,8 @@
 <?php
 
-namespace Imaginarium;
+namespace Controllers;
+
+Use Models\IndexModel;
 
 class IndexController extends MainController
 {

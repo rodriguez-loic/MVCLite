@@ -1,0 +1,20 @@
+{
+    "name": "akronos/www",
+    "description": "Very Light MVC",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Loïc Rodriguez",
+            "email": "contact@rodriguez-loic.me"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Components\\": "Components/",
+        "Controllers\\": "Controllers/",
+        "Models\\": "Models/"
+      }
+    }
+}

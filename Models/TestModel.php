@@ -1,6 +1,6 @@
 <?php
 
-namespace Imaginarium;
+namespace Models;
 
 class TestModel extends MainModel
 {

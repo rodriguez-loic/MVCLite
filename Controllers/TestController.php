@@ -1,6 +1,6 @@
 <?php
 
-namespace Imaginarium;
+namespace Controllers;
 
 class TestController extends MainController
 {
