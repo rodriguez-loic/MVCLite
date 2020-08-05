@@ -18,10 +18,4 @@ RewriteRule ^(.+)$ public/index.php/$1 [L]
 
 ## Improvements
 
-Feel free to improve it so it's more secure/handly for what you need to do.
-
-Few hints are:
-- Moving DB connexion to vendor
-- Use of ORM such as vlucas/spot2
-- Add config directory
-- Update routing system with request/dispatch/response system to handle more complex namespaces
+Feel free to improve it so it's more secure/handly for what you need to do. You can, for example, add an ORM like vlucas/spot2.
