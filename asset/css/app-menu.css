@@ -1,5 +1,5 @@
 #lr-menu {
-    background-color: #D50000;
+    background-color: #00C853;
     color: #fff;
     width: 100%; height: 60px;
 }
@@ -56,14 +56,14 @@
 #lr-menu ul > li.lr-active,
 #lr-menu ul > li:hover,
 #lr-menu uk > li:focus {
-    background-color: #f44336;
+    background-color: #4CAF50;
 }
 #lr-menu ul > li.lr-register {
-    background-color: #ff7000;
+    background-color: #1B5E20;
 }
 #lr-menu ul > li.lr-register:hover,
 #lr-menu ul > li.lr-register:focus {
-    background-color: #ff4000;
+    background-color: #69F0AE;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -125,7 +125,7 @@
     #lr-menu > ul > li {
         clear: both;
         width: 100%; height: 60px;
-        background-color: #f44336;
+        background-color: #4CAF50;
         margin: 0; padding: 0;
     }
     #lr-menu ul.lr-left > li:first-child {
@@ -133,6 +133,6 @@
     }
     #lr-menu ul > li:hover,
     #lr-menu ul > li:focus {
-        background-color: #d50000;
+        background-color: #00C853;
     }
 }

@@ -8,7 +8,7 @@
     zoom:1; /* For IE 6 & 7 */
 }
 .lr-row .lr-row { padding: 0; }
-.lr-row .lr-full { width: 100%; }
+.lr-full { width: 100%; }
 .lr-row:before,
 .lr-row:after {
     content:"";
@@ -209,6 +209,8 @@
  * Medium
  */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
+    .lr-row { width: auto; max-width: 940px; }
+
     .lr-ms12 { width: 100%;    }
     .lr-ms11 { width: 91.667%; }  .lr-mo1  { margin-left: 8.333% !important;  }
     .lr-ms10 { width: 83.333%; }  .lr-mo2  { margin-left: 16.667% !important; }
@@ -294,6 +296,8 @@
  * Small
  */
 @media only screen and (max-width: 640px) {
+    .lr-row { width: auto; max-width: 940px; }
+
     .lr-s12, .lr-s11, .lr-s10, .lr-s9, .lr-s8, .lr-s7, .lr-s6, .lr-s5, .lr-s4, .lr-s3, .lr-s2, .lr-s1   { width: 100%;      }
     .lr-o1, .lr-o2, .lr-o3, .lr-o4, .lr-o5, .lr-o6, .lr-o7, .lr-o8, .lr-o9, .lr-o10, .lr-o11            { margin-left: 0 !important;   }
     .lr-push-1, .lr-push-2, .lr-push-3, .lr-push-4, .lr-push-5, .lr-push-6, .lr-push-7, .lr-push-8,

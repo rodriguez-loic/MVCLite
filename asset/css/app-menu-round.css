@@ -1,5 +1,5 @@
 #lr-menu-round {
-    background: url('../img/little-red-menu.png') white;
+    background: url('../img/imaginarium-menu.png') white;
     display: block;
     position: fixed;
     width: 50px; height: 50px;
@@ -11,7 +11,7 @@
 }
 #lr-menu-round:hover,
 #lr-menu-round:focus {
-    background: url('../img/little-red-menu-hover.png') white;
+    background: url('../img/imaginarium-menu-hover.png') white;
     cursor: pointer;
 }
 #lr-menu-round a,
@@ -29,7 +29,7 @@
     list-style: none;
     bottom: -20px; right: 5px;
     text-align: center;
-    color: #fff; background-color: #d50000;
+    color: #fff; background-color: #00C853;
     bottom: 5px; right: 5px;
     width: 40px; height: 40px;
     font-size: 20px; line-height: 40px;
@@ -39,5 +39,5 @@
 }
 #lr-menu-round > ul > li:hover,
 #lr-menu-round > ul > li:focus {
-    background-color: #ff6f00;
+    background-color: #1b5e20;
 }

@@ -2,13 +2,21 @@
 
 $routes = [
     '*' => [
-        '/' => [
-            'controller' => 'IndexController',
-            'template' => 'template-index'
-        ]
+        'user/signup'       =>
+        [
+            'controller'    => 'UserController',
+            'template'      => 'template-index'
+        ],
+        'user/signin'       => 'UserController',
     ],
     'GET' => [
-        'test' => 'Test\SubnamespaceController'
+        '/'                 =>
+        [
+            'controller'    => 'IndexController',
+            'template'      => 'template-index'
+        ],
+        'user/index'        => 'UserController',
+        'user/logout'       => 'UserController',
     ],
     'POST' => [
     ],

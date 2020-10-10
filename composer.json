@@ -1,7 +1,7 @@
 {
     "name": "akronos/mvclite2",
     "description": "Very Light MVC",
-    "version": "2.0.0-beta",
+    "version": "2.1.0-beta",
     "type": "project",
     "authors": [
         {
@@ -14,7 +14,9 @@
        "GPL-3.0-or-later"
     ],
     "minimum-stability": "alpha",
-    "require": {},
+    "require": {
+        "vlucas/spot2": "^2.2"
+    },
     "autoload": {
       "psr-4": {
         "": "src/",

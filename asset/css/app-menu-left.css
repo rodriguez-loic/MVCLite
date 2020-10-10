@@ -1,5 +1,5 @@
 #lr-menu-left h2 {
-    background-color: #d50000;
+    background-color: #00C853;
     color: #fff;
     margin: 0;
     text-align: center;
@@ -26,7 +26,7 @@
 #lr-menu-left ul > li.lr-active a {
     cursor: pointer;
     background: #FFEBEE;
-    color: #d50000;
+    color: #00C853;
 }
 #lr-menu-left ul > li > a {
     width: 100%; height: 100%;

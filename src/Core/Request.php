@@ -48,7 +48,19 @@ class Request
 
         $urlParts = $this->getUrlParts();
 
-        $route = Router::getRoute($urlParts[0]);
+        if (!isset($urlParts[1]) || $urlParts[1] === '') {
+            $method = APP_DEFAULT_CONTROLLER_METHOD;
+        } else {
+            $method = $urlParts[1];
+        }
+
+        if ($urlParts[0] === '/') {
+            $routePath = '/';
+        } else {
+            $routePath = $urlParts[0] . '/' . $method;
+        }
+
+        $route = Router::getRoute($routePath);
 
         $ctrlrRoute = $route['controller'];
  
@@ -83,7 +95,7 @@ class Request
         // If controller method exists in system then return it
         $method = $this->constructMethod($urlParts[1]);
         if (method_exists($controller, $method)) {
-            return $method;
+            return $this->dashesToCamelCase($method);
         }
  
         // Otherwise
@@ -132,6 +144,17 @@ class Request
         }
 
         return $requestedParams;
+    }
+
+    private function dashesToCamelCase($string, $capitalizeFirstCharacter = false) 
+    {
+        $str = str_replace('-', '', ucwords($string, '-'));
+
+        if (!$capitalizeFirstCharacter) {
+            $str = lcfirst($str);
+        }
+
+        return $str;
     }
  
     private function getUrlParts()

@@ -6,7 +6,14 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Valitron\\' => array($vendorDir . '/vlucas/valitron/src/Valitron'),
+    'Spot\\' => array($vendorDir . '/vlucas/spot2/lib'),
+    'SpotTest\\' => array($vendorDir . '/vlucas/spot2/tests'),
+    'Sabre\\Event\\' => array($vendorDir . '/sabre/event/lib'),
     'Models\\' => array($baseDir . '/Models'),
+    'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib/Doctrine/DBAL'),
+    'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
+    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
     'Controllers\\' => array($baseDir . '/Controllers'),
     'Components\\' => array($baseDir . '/Components'),
     '' => array($baseDir . '/src'),

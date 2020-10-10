@@ -1,0 +1,13 @@
+#DirectoryIndex public/index.php
+ 
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^asset/(css|js|img)/(.*)$ - [NC,L]
+
+
+RewriteRule ^$ public/     [L]
+RewriteRule (.*) public/$1 [L]

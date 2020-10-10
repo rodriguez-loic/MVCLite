@@ -2,33 +2,24 @@
 
 namespace Model;
 
-use Core\DB;
-
-class UserModel extends DB
+class UserModel extends \Spot\Entity
 {
-    public $table = 'users';
+    protected static $table = 'users';
 
-    public $id;
-    public $username;
+    protected $id;
+    protected $username;
+    protected $password;
+    protected $email;
+    protected $created_at;
 
-    public function __construct($id)
+    public static function fields()
     {
-        parent::__construct();
-
-        $sql = '
-            SELECT *
-            FROM ' . $this->table . '
-            WHERE id = ?
-        ';
-
-        $userDetails =  $this->runQuery($sql, [$id]);
-
-        if ($userDetails->rowCount() == 1) {
-            $result = $userDetails->fetch();
-            $this->id = $result['id'];
-            $this->username = $result['username'];
-        } else {
-          throw new Exception("No user found for ID '$id'");
-        }
+        return [
+            'id'            => ['type' => 'integer', 'primary' => true, 'autoincrement' => true],
+            'username'      => ['type' => 'string', 'required' => true, 'unique' => 'users_username'],
+            'password'      => ['type' => 'string', 'required' => true],
+            'email'         => ['type' => 'string', 'required' => true],
+            'created_at'    => ['type' => 'datetime', 'value' => new \DateTime()]
+        ];
     }
 }
