@@ -175,24 +175,8 @@ var resizeMenu = function() {
     });
 }
 
-var resizePanelCards = function() {
-    
-    $('.panel-cards').css('height', 'auto');
-
-    var panelHeight = 0;
-    $('.panel-cards').each(function() {
-        if (panelHeight < $(this).height()) {
-            panelHeight = $(this).height();
-        }
-    });
-
-    $('.panel-cards').css('height', panelHeight);
-}
-
 $(window).resize(function() {
     resizeMenu();
-
-    resizePanelCards();
 });
 
 
@@ -202,8 +186,6 @@ $(document).load(function() {
 
 $(document).ready(function() {
     resizeMenu();
-
-    resizePanelCards();
 
     $('#lr-menu .lr-menu-icon').on('click', function() {
         if ($('#lr-menu ul').is(':visible')) {
@@ -259,36 +241,5 @@ $(document).ready(function() {
         $('.lr-goto.lr-active').removeClass('lr-active');
         $(this).parent('li').addClass('lr-active');
         window.location = target;
-    })
-
-    $('.panel-cards').on('click', function(e) {
-        e.preventDefault();
-        let characterId = $(this).data('id');
-        let characterRace = $(this).data('race');
-        $.confirm({
-            icon: 'fas fa-exclamation-triangle',
-            title: 'Ês-tu sûr de toi?',
-            content: 'Tu es en train de choisir le personnage de race "' + characterRace + '" pour cette aventure. Es-tu sûr de ton choix?',
-            type: 'orange',
-            buttons: {
-                oui: {
-                    btnClass: 'btn-primary',
-                    keys: ['enter'],
-                    action: function () {
-                        $.post($(location).attr("href"), {characterId: characterId})
-                            .done(function( data ) {
-                                let result = $.parseJSON(data);
-                                if (result.status === true) {
-                                    window.location.replace(result.response);
-                                }
-                            });
-                    }
-                },
-                non: {
-                    keys: ['esc'],
-                    action: function () {}
-                }
-            }
-        });
-    })
+    });
 });
