@@ -25,3 +25,5 @@ Few hints are:
 - Use of ORM such as vlucas/spot2
 - Add config directory
 - Update routing system with request/dispatch/response system to handle more complex namespaces
+
+Please use version 2.0
